@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    
+</head>
+<body>
+
+     <div id="form-all">
+        
+        <div id="app" class="container pt-5">
+            
+    
+            <!--1ページ目-->
+            <div class="col-md-4 offset-md-4" v-if="page==1">
+                <div class="form-group">
+                    <h3><span class="must">必須</span>ご希望の働き方</h3>
+                    <input class="form-control" type="text" v-model="params.work" required>
+                </div>
+                
+                <div class="form-group">
+                    <h3><span class="must">必須</span>ご希望の転職時期</h3>
+
+                    <input class="form-control" type="text" v-model="params.time" required>
+                </div>
+                
+            </div>
+            
+            <!--2ページ目-->
+            <div class="col-md-4 offset-md-4" v-if="page==2">
+                <div class="form-group">
+                    
+                    <h3><span class="must">必須</span>現在お持ちの資格</h3>
+                    <input class="form-control" type="" v-model="params.lisence" required>
+                </div>
+                
+                
+            </div>
+            
+            <!--3ページ目-->
+            <div class="col-md-4 offset-md-4" v-if="page==3">
+                <div class="form-group">
+                    <h3><span class="must">必須</span>現在の職務内容</h3>
+                    <input class="form-control" type="" v-model="params.job_now" required>
+                </div>
+                <div class="form-group">
+                    <h3><span class="must">必須</span>ご希望の職種</h3>
+                    <input class="form-control" type="text" v-model="params.job_fut" required>
+                </div>
+                
+            </div>
+            
+            <!--4ページ目-->
+            <div class="col-md-4 offset-md-4" v-if="page==4">
+                <div class="form-group">
+                    <h3><span class="must">必須</span>お住まい</h3>
+                    <input class="form-control" type="" v-model="params.adress_pre" required>
+                    <input class="form-control" type="" v-model="params.adress_town" required>
+                </div>
+                
+                <div class="form-group">
+                    <h3><span class="must">必須</span>基本情報</h3>
+                    <label>お名前</label>
+                    <input class="form-control" type="" v-model="params.name" required>
+                    <label>誕生年</label>
+                    <input class="form-control" type="" v-model="params.birthday" required>
+                </div>
+               
+                
+            </div>
+            
+            <!--5ページ目-->
+            <div class="col-md-4 offset-md-4" v-if="page==5">
+                <div class="form-group">
+                    <h3>ご連絡先</h3>
+                    <label><span class="must">必須</span>電話番号</label>
+                    <input class="form-control" type="" required v-model="params.phone">
+                    
+                    <label>メールアドレス</label>
+                    <input class="form-control" type="" v-model="params.mail">
+                    
+                    <label>LINE ID</label>
+                    <input class="form-control" type="" v-model="params.idnumber">
+                    
+                </div>
+                
+                
+            </div>
+            
+            <!--サンクスページ-->
+            <div class="col-md-4 offset-md-4" v-if="page==6">
+                <div class="form-group">
+                    
+                    
+                </div>
+                
+                
+            </div>
+            
+    </div>
+    </div>
+        
+    <!--入力フォームend-->
+        
+   
+
+        
+    <!--フッター-->
+        
+        
+        
+        
+    <!--/フッター-->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!--  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
+    <script>
+
+        new Vue({
+            el: '#app',
+            data: {
+                page: 1 // 入力ページ番号（１〜３）
+                params: {
+           work: '',
+            time: '',
+            lisence: '',
+            job_now: '',
+            job_fut: '',
+            adress_pre: '',
+            adress_town: '',
+            name: '',
+            birthday: '',
+            phone: '',
+            mail: '',
+            idnumber: '',
+            
+            }
+        });
+
+    </script>
+
+    
+    
+    
+    
+    
+    
+</body>
+</html>
